@@ -10,6 +10,11 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  let matriz = [];
+  for(prop in objeto){
+    matriz.push([prop, objeto[prop]])
+  };
+  return matriz
 }
 
 
@@ -18,7 +23,23 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-}
+  var newObject = {};
+  var array = string.split('').sort();
+  for (let i = 0; i < array.length; i++) {
+    if(newObject[array[i]]){
+      newObject[array[i]] = newObject[array[i]] + 1
+    } else {
+      newObject[array[i]] = 1
+    }
+    
+  }
+
+  // for(let i = 0; i < string.length; i++)
+  // if(pares.hasOwnProperty(string[i])){
+
+  // }
+return newObject;
+} 
 
 
 function capToFront(s) {
@@ -66,6 +87,18 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  
+  var interseccion = [];
+
+  for (var i = 0; i < arreglo1.length; i++) {
+    for (var j = 0; j < arreglo2.length; j++) {
+      if(arreglo1[i] === arreglo2[j]){
+        interseccion.push(arreglo1[i])
+      }
+        
+    }
+    
+  }
 }
 
 
